@@ -356,18 +356,23 @@ function displayPainting(painting) {
   let gallery = document.getElementById("gallery");
   let image = document.createElement("img");
   let linkElement = document.createElement("a");
-
   linkElement.href = `./pages/detail-page.html`;
 
   image.classList.add("artObject");
   image.src = painting.webImage.url;
 
   linkElement.appendChild(image);
-
   gallery.appendChild(linkElement);
 }
 
 for (let i = 0; i < paintings.length; i++) {
   let currentPainting = paintings[i];
-  displayPainting(currentPainting);
+  let year = currentPainting.longTitle.match(/\d{4}/g);
+  if (
+    year[0] < 1800 ||
+    (year[1] < 1800 &&
+      currentPainting.webImage.width > 1500 &&
+      currentPainting.principalOrFirstMaker.match(/^((?!honthorst).)*$/i))
+  )
+    displayPainting(currentPainting);
 }
