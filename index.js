@@ -371,38 +371,3 @@ for (let i = 0; i < paintings.length; i++) {
   let currentPainting = paintings[i];
   displayPainting(currentPainting);
 }
-
-// function displayPainting(paintings) {
-//     let currentPainting = paintings[i];
-// paintings.forEach(function(art) {
-//   let gallery = document.getElementById("gallery");
-//   let image = document.createElement("img");
-//   let linkElement = document.createElement("a");
-
-//   linkElement.href = `./pages/${art.id}.html`;
-
-//   image.classList.add("artObject");
-//   image.src = art.webImage.url;
-
-//   linkElement.appendChild(image);
-
-//   gallery.appendChild(linkElement);
-// });
-
-/*
-currentPainting.innerHTML = `<a href="pages/detail-page.html"> 
- <img
-   class="artObject"
-   alt="${paintings[i].title}"
-   src="${paintings[i].webImage.url}" 
- />
-</a>`;
-  console.log(currentPainting);
-}
-
-const gallerySection = document.querySelector("#gallery");
-
-const galleryImg = document.createElement("a");
-galleryImg.innerHTML = gallerySection.appendChild(galleryImg);
- 
-*/
