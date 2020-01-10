@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Man with violin</title>
+    <script src="detail-page.js"></script>
+  </head>
+  <body>
+    <h1>
+      Nicole's Mobile Museum App
+    </h1>
+    <img
+      class="artObject"
+      alt="Painting: Man with violin"
+      src="https://lh3.googleusercontent.com/V3sjNgCA_Jssjm0sTKaPZeOwCv_vAPpjllrAF-yAB8UkqIlc6UX_jxJmxH_axVHTHxlK1E7Slecg8K5bIvSbDlw0zg=s0"
+    />
+    <section id="comments">
+      <h2>Comments</h2>
+      <section class="comment">
+        <h3>Arien said:</h3>
+        <p>"This is definitely one of my favorites!"</p>
+      </section>
+    </section>
+    <form onsubmit="submitComment(); return false">
+      <div class="formSection">
+        <label for="name">Name:</label>
+        <input type="text" id="name" />
+      </div>
+      <div class="formSection">
+        <label for="msg">Message:</label>
+        <textarea id="msg"></textarea>
+      </div>
+      <div class="button">
+        <button type="default">Post your comment</button>
+      </div>
+    </form>
+  </body>
+</html>
